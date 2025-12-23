@@ -1,3 +1,7 @@
 <view class="page">
-  <text>分析中...（页面占位）</text>
+  <view class="status-card">
+    <image src="/images/analyzing.gif" wx:if="{{status === 'analyzing'}}" class="icon" mode="aspectFit" />
+    <text class="status-text">{{statusText}}</text>
+    <text class="status-hint">{{hint}}</text>
+  </view>
 </view>

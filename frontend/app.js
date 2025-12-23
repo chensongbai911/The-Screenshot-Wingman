@@ -11,7 +11,7 @@ App({
     }
 
     wx.cloud.init({
-      env: 'cloud1', // TODO: 替换为真实环境 ID
+      env: process.env.CLOUDBASE_ENV_ID || 'cloud1',
       traceUser: true,
     });
 

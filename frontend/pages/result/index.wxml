@@ -1,3 +1,30 @@
 <view class="page">
-  <text>结果页（页面占位）</text>
+  <view class="card profile">
+    <text class="profile-text">{{result.profile_one_liner || '分析中...'}}</text>
+  </view>
+
+  <view class="card section" wx:if="{{result.emotion}}">
+    <text class="section-title">情绪评分</text>
+    <view wx:for="{{result.emotion}}" wx:key="label" class="bar-row">
+      <text class="label">{{item.label}}</text>
+      <view class="bar">
+        <view class="bar-fill" style="width: {{item.score}}%"></view>
+      </view>
+      <text class="score">{{item.score}}</text>
+    </view>
+  </view>
+
+  <view class="card section" wx:if="{{result.replies}}">
+    <text class="section-title">三种风格回复</text>
+    <view wx:for="{{result.replies}}" wx:key="style" class="reply-item" bindtap="copyReply" data-text="{{item.text}}">
+      <text class="reply-style">{{item.style}}</text>
+      <text class="reply-text">{{item.text}}</text>
+      <text class="reply-note">{{item.note}}</text>
+    </view>
+  </view>
+
+  <view class="card section" wx:if="{{result.strategy}}">
+    <text class="section-title">策略建议</text>
+    <view wx:for="{{result.strategy}}" wx:key="*this" class="list-item">• {{item}}</view>
+  </view>
 </view>
