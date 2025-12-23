@@ -1,1 +1,143 @@
-.page { padding: 32rpx; }
+.page {
+  padding: 32rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #6C5CE7, #A78BFA);
+  border-radius: 16rpx;
+  padding: 48rpx 32rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.balance-label {
+  font-size: 28rpx;
+  opacity: 0.9;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.balance-value {
+  font-size: 72rpx;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12rpx;
+}
+
+.balance-hint {
+  font-size: 24rpx;
+  opacity: 0.8;
+  display: block;
+}
+
+.section-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+  display: block;
+}
+
+.products {
+  margin-top: 16rpx;
+}
+
+.product-row {
+  display: flex;
+  gap: 16rpx;
+}
+
+.product-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 32rpx 24rpx;
+  text-align: center;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.04);
+  border: 2rpx solid transparent;
+  transition: all 0.3s;
+}
+
+.product-card:active {
+  border-color: #6C5CE7;
+  transform: scale(0.98);
+}
+
+.product-credits {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #1D2129;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.product-price {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #6C5CE7;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.product-note {
+  font-size: 24rpx;
+  color: #86909C;
+  display: block;
+}
+
+.ledger {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.04);
+}
+
+.empty {
+  text-align: center;
+  padding: 48rpx;
+  color: #86909C;
+  font-size: 26rpx;
+}
+
+.ledger-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #F2F3F5;
+}
+
+.ledger-item:last-child {
+  border-bottom: none;
+}
+
+.ledger-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+}
+
+.ledger-type {
+  font-size: 28rpx;
+  color: #1D2129;
+}
+
+.ledger-time {
+  font-size: 24rpx;
+  color: #86909C;
+}
+
+.ledger-delta {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.ledger-delta.positive {
+  color: #00B42A;
+}
+
+.ledger-delta.negative {
+  color: #F53F3F;
+}

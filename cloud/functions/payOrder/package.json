@@ -1,0 +1,9 @@
+{
+  "name": "payOrder",
+  "version": "1.0.0",
+  "description": "处理支付回调并充值积分",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "^2.0.0"
+  }
+}

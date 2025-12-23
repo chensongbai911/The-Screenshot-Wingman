@@ -1,3 +1,17 @@
 <view class="page">
-  <text>历史记录（页面占位）</text>
+  <view wx:if="{{tasks.length === 0}}" class="empty">
+    <text>暂无分析记录</text>
+  </view>
+
+  <view wx:for="{{tasks}}" wx:key="_id" class="task-card" bindtap="viewTask" data-id="{{item._id}}">
+    <view class="task-header">
+      <text class="task-time">{{item.timeLabel}}</text>
+      <view class="status-tag {{item.statusClass}}">{{item.statusLabel}}</view>
+    </view>
+    <text class="task-preview" wx:if="{{item.preview}}">{{item.preview}}</text>
+    <view class="task-meta">
+      <text class="meta-item" wx:if="{{item.relationType}}">{{关系}}: {{item.relationLabel}}</text>
+      <text class="meta-item" wx:if="{{item.goalType}}">{{目标}}: {{item.goalLabel}}</text>
+    </view>
+  </view>
 </view>

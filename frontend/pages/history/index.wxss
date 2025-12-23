@@ -1,1 +1,81 @@
-.page { padding: 32rpx; }
+.page {
+  padding: 32rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.empty {
+  text-align: center;
+  padding: 120rpx 0;
+  color: #86909C;
+  font-size: 26rpx;
+}
+
+.task-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.04);
+  transition: all 0.2s;
+}
+
+.task-card:active {
+  transform: scale(0.98);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.task-time {
+  font-size: 24rpx;
+  color: #86909C;
+}
+
+.status-tag {
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+  font-size: 22rpx;
+  font-weight: 500;
+}
+
+.status-tag.success {
+  background: #E8FFEA;
+  color: #00B42A;
+}
+
+.status-tag.processing {
+  background: #E8F3FF;
+  color: #165DFF;
+}
+
+.status-tag.error {
+  background: #FFECE8;
+  color: #F53F3F;
+}
+
+.task-preview {
+  font-size: 28rpx;
+  color: #1D2129;
+  line-height: 1.6;
+  display: block;
+  margin-bottom: 12rpx;
+}
+
+.task-meta {
+  display: flex;
+  gap: 16rpx;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-size: 24rpx;
+  color: #4E5969;
+  background: #F7F8FA;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+}

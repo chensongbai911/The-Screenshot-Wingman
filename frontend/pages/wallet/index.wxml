@@ -1,3 +1,32 @@
 <view class="page">
-  <text>钱包（页面占位）</text>
+  <view class="balance-card">
+    <text class="balance-label">可用点数</text>
+    <text class="balance-value">{{credits}}</text>
+    <text class="balance-hint">每次分析消耗 1 点</text>
+  </view>
+
+  <view class="products">
+    <text class="section-title">购买点数</text>
+    <view class="product-row">
+      <view wx:for="{{products}}" wx:key="id" class="product-card" bindtap="buyProduct" data-id="{{item.id}}">
+        <text class="product-credits">{{item.credits}} 点</text>
+        <text class="product-price">¥{{item.price}}</text>
+        <text class="product-note">{{item.note}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="ledger">
+    <text class="section-title">交易记录</text>
+    <view wx:if="{{ledger.length === 0}}" class="empty">
+      <text>暂无交易记录</text>
+    </view>
+    <view wx:for="{{ledger}}" wx:key="_id" class="ledger-item">
+      <view class="ledger-left">
+        <text class="ledger-type">{{item.typeLabel}}</text>
+        <text class="ledger-time">{{item.timeLabel}}</text>
+      </view>
+      <text class="ledger-delta {{item.delta > 0 ? 'positive' : 'negative'}}">{{item.delta > 0 ? '+' : ''}}{{item.delta}}</text>
+    </view>
+  </view>
 </view>
