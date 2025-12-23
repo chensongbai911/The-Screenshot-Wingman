@@ -1,0 +1,28 @@
+:root {
+  --color-primary: #6C5CE7;
+  --color-text: #1D2129;
+  --color-subtext: #86909C;
+  --color-bg: #F7F8FA;
+  --radius-lg: 16rpx;
+  --radius-sm: 8rpx;
+}
+
+page {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.button-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 24rpx;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.04);
+}

@@ -1,0 +1,38 @@
+<view class="page">
+  <view class="header">
+    <text class="title">聊天截图军师</text>
+    <text class="subtitle">上传截图，获取即时分析与三种风格回复</text>
+  </view>
+
+  <view class="card upload-card">
+    <view class="upload-area" bindtap="chooseImage">
+      <text wx:if="{{!imagePath}}">点击上传聊天截图</text>
+      <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFill" class="preview" />
+    </view>
+  </view>
+
+  <view class="card chips">
+    <text class="section-title">关系</text>
+    <view class="chip-row">
+      <view wx:for="{{relationOptions}}" wx:key="key" class="chip {{item.key===relation? 'chip-active' : ''}}" bindtap="selectRelation" data-key="{{item.key}}">{{item.label}}</view>
+    </view>
+  </view>
+
+  <view class="card chips">
+    <text class="section-title">目标</text>
+    <view class="chip-row">
+      <view wx:for="{{goalOptions}}" wx:key="key" class="chip {{item.key===goal? 'chip-active' : ''}}" bindtap="selectGoal" data-key="{{item.key}}">{{item.label}}</view>
+    </view>
+  </view>
+
+  <view class="card privacy">
+    <label class="privacy-row">
+      <checkbox checked="{{privacyAccepted}}" color="#6C5CE7" bindchange="togglePrivacy" />
+      <text>我已阅读并同意隐私说明，仅用于生成分析</text>
+    </label>
+  </view>
+
+  <view class="start-btn {{canStart? '' : 'disabled'}}" bindtap="startAnalysis">
+    <text>开始分析</text>
+  </view>
+</view>

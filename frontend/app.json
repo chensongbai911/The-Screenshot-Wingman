@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/analyzing/analyzing",
+    "pages/rolefix/rolefix",
+    "pages/result/result",
+    "pages/wallet/wallet",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#6C5CE7",
+    "navigationBarTitleText": "ChatWiz",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#86909C",
+    "selectedColor": "#6C5CE7",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "分析"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史"
+      },
+      {
+        "pagePath": "pages/wallet/wallet",
+        "text": "钱包"
+      }
+    ]
+  },
+  "style": "v2",
+  "cloud": true
+}
