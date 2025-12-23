@@ -28,6 +28,9 @@ miniprogram_npm/
 project.private.config.json
 miniprogram_dist/
 
+# 前端配置（包含环境 ID）
+frontend/config.js
+
 # ==========================================
 # IDE 与编辑器
 # ==========================================

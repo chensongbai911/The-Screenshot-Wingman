@@ -1,4 +1,6 @@
 // 全局入口，初始化云开发并预取用户信息
+const config = require('./config');
+
 App({
   globalData: {
     user: null,
@@ -11,7 +13,7 @@ App({
     }
 
     wx.cloud.init({
-      env: process.env.CLOUDBASE_ENV_ID || 'cloud1',
+      env: config.cloudbaseEnvId,
       traceUser: true,
     });
 
